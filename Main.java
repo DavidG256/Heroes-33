@@ -22,7 +22,7 @@ public class Main {
             System.out.print("Elige una opción: ");
 
             int opcion = scanner.nextInt();
-            scanner.nextLine(); // Limpiar buffer
+            scanner.nextLine(); 
 
             switch (opcion) {
                 case 1:
@@ -57,7 +57,7 @@ public class Main {
     }
 
     private static void añadirHeroe() {
-        System.out.println("\nSelecciona tipo de héroe:");
+        System.out.println("Selecciona el tipo de héroe:");
         System.out.println("1. Guerrero");
         System.out.println("2. Mago");
         System.out.println("3. Arquero");
