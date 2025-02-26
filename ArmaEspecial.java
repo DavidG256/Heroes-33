@@ -1,28 +1,39 @@
-public class ArmaEspecial extends Heroe {
-    protected String nombreArma;
-    protected int dañoArma;
+import java.util.Objects;
 
+public class ArmaEspecial {
+    private String nombre;
+    private int daño;
 
-    public ArmaEspecial(String nombre, int nivel, int puntosDeVida, String armaEspecial, String nombreArma, int dañoArma) {
-        super(nombre, nivel, puntosDeVida, armaEspecial);
-        this.nombreArma = nombreArma;
-        this.dañoArma = dañoArma;
+    public ArmaEspecial(String nombre, int daño) {
+        this.nombre = nombre;
+        this.daño = daño;
     }
 
-    public String getNombreArma() {
-        return nombreArma;
+    public String getNombre() {
+        return nombre;
     }
 
-    public int getDañoArma() {
-        return dañoArma;
+    public int getDaño() {
+        return daño;
     }
 
     @Override
     public String toString() {
         return "ArmaEspecial{" +
-                "nombreArma='" + nombreArma + '\'' +
-                ", dañoArma=" + dañoArma +
+                "daño=" + daño +
                 '}';
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        ArmaEspecial arma = (ArmaEspecial) obj;
+        return daño == arma.daño && Objects.equals(nombre, arma.nombre);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nombre, daño);
+    }
 }
