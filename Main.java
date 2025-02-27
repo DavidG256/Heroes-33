@@ -125,7 +125,7 @@ public class Main {
     }
 
     private static void eliminarHeroe() {
-        System.out.print("\nNombre del héroe a eliminar: ");
+        System.out.print("Nombre del héroe a eliminar: ");
         String nombre = scanner.nextLine();
 
         for (Heroe h : heroes) {
@@ -139,7 +139,7 @@ public class Main {
     }
 
     private static void buscarHeroe() {
-        System.out.print("\nNombre del héroe a buscar: ");
+        System.out.print("Nombre del héroe a buscar: ");
         String nombre = scanner.nextLine();
 
         for (Heroe h : heroes) {
@@ -153,9 +153,9 @@ public class Main {
 
     private static void listarHeroes() {
         if (heroes.isEmpty()) {
-            System.out.println("\nNo hay héroes registrados.");
+            System.out.println("No hay héroes registrados.");
         } else {
-            System.out.println("\nLista de Héroes:");
+            System.out.println("Lista de Héroes:");
             for (Heroe h : heroes) {
                 System.out.println(h);
             }
