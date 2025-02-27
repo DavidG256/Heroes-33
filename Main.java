@@ -110,7 +110,7 @@ public class Main {
                 }
                 System.out.print("Elige una opción: ");
                 int eleccion = scanner.nextInt() - 1;
-                scanner.nextLine(); // Limpiar buffer
+                scanner.nextLine(); 
 
                 if (eleccion >= 0 && eleccion < arsenal.size()) {
                     h.agregarArma(arsenal.get(eleccion));
